@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fayola Carani Malya - Portofolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Fayola<span>.</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link active" data-id="Tentang" data-en="About">Tentang</a></li>
+                <li><a href="#experience" class="nav-link" data-id="Pengalaman" data-en="Experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-id="Proyek" data-en="Projects">Projects</a></li>
+                <li><a href="#certifications" class="nav-link" data-id="Sertifikasi" data-en="Certifications">Certifications</a></li>
+                <li><a href="#contact" class="nav-link" data-id="Kontak" data-en="Contact">Contact</a></li>
+            </ul>
+            <button class="lang-toggle" id="lang-toggle">
+                <span class="lang-option active" data-lang="id">ID</span>
+                <span class="lang-divider">/</span>
+                <span class="lang-option" data-lang="en">EN</span>
+            </button>
+        </div>
+    </nav>
+
+    <!--About-->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-photo">
+            <img src="assets/Fayola.JPG" alt="Fayola Carani Malya">
+            </div>
+            <div class="hero-text">
+            <p class="hero-eyebrow" data-id="Halo, perkenalkan saya" data-en="Hi, let me introduce myself">Halo, perkenalkan saya</p>
+            <h1 class="hero-name">Fayola Carani Malya</h1>
+            <div class="hero-roles">
+                <span class="role-badge">Frontend Developer</span>
+                <span class="role-badge">System Analyst</span>
+            </div>
+            <p class="hero-desc" id="hero-desc">
+                Fresh graduate D3 Teknologi Informasi Universitas Brawijaya (Cumlaude, GPA 3.90) dengan pengalaman merancang dan membangun sistem secara end-to-end — mulai dari analisis kebutuhan, perancangan (ERD, use case diagram, wireframe), hingga implementasi antarmuka web. Terbiasa bekerja lintas peran antara System Analyst dan Frontend Developer, sehingga memahami proses sistem sekaligus mampu mewujudkannya jadi produk nyata.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary" data-id="Hubungi Saya" data-en="Contact Me">Hubungi Saya</a>
+                <a href="assets/CV_Fayola_Carani_Malya.pdf" class="btn btn-secondary" download data-id="Download CV" data-en="Download CV">Download CV</a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!--experience-->>
+    <section class="experience" id="experience">
+        <div class="section-container">
+            <h2 class="section-title" data-id="Pengalaman" data-en="Experience">Pengalaman</h2>
+            <div class="timeline" id="timeline"></div>
+        </div>
+    </section>
+    <!--  Projects -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <h2 class="section-title" data-id="Proyek" data-en="Projects">Proyek</h2>
+            <div class="project-grid" id="project-grid"></div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications" id="certifications">
+        <div class="section-container">
+            <h2 class="section-title" data-id="Sertifikasi" data-en="Certifications">Sertifikasi</h2>
+            <div class="cert-grid" id="cert-grid"></div>
+        </div>
+    </section>
+
+    <!-- Section: Contact akan di sini -->
+    <div class="modal-overlay" id="detail-modal">
+        <div class="modal-box">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animation.js"></script>
+</body>
+</html>
