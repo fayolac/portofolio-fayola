@@ -1,84 +1,146 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fayola Carani Malya - Portofolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">Fayola<span>.</span>
-            </a>
+            <a href="#hero" class="nav-logo">Fayola<span>.</span></a>
+
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hero" class="nav-link active" data-id="Tentang" data-en="About">Tentang</a></li>
-                <li><a href="#experience" class="nav-link" data-id="Pengalaman" data-en="Experience">Experience</a></li>
-                <li><a href="#projects" class="nav-link" data-id="Proyek" data-en="Projects">Projects</a></li>
-                <li><a href="#certifications" class="nav-link" data-id="Sertifikasi" data-en="Certifications">Certifications</a></li>
-                <li><a href="#contact" class="nav-link" data-id="Kontak" data-en="Contact">Contact</a></li>
+            <li><a href="#hero" class="nav-link active" data-id="Tentang" data-en="About">Tentang</a></li>
+            <li><a href="#skills" class="nav-link" data-id="Keahlian" data-en="Skills">Keahlian</a></li>
+            <li><a href="#projects" class="nav-link" data-id="Proyek" data-en="Projects">Proyek</a></li>
+            <li><a href="#certifications" class="nav-link" data-id="Sertifikasi" data-en="Certifications">Sertifikasi</a></li>
+            <li><a href="#education" class="nav-link" data-id="Pendidikan" data-en="Education">Pendidikan</a></li>
+            <li><a href="#experience" class="nav-link" data-id="Pengalaman" data-en="Experience">Pengalaman</a></li>
+            <li><a href="#organizations" class="nav-link" data-id="Organisasi" data-en="Organizations">Organisasi</a></li>
+            <li><a href="#contact" class="nav-link" data-id="Kontak" data-en="Contact">Kontak</a></li>
             </ul>
+
+            <div class="nav-actions">
             <button class="lang-toggle" id="lang-toggle">
                 <span class="lang-option active" data-lang="id">ID</span>
                 <span class="lang-divider">/</span>
                 <span class="lang-option" data-lang="en">EN</span>
             </button>
+
+            <button class="theme-toggle" id="theme-toggle">
+                <span class="theme-icon">☀</span>
+            </button>
+            </div>
         </div>
     </nav>
 
-    <!--About-->
+    <!-- Hero -->
     <section class="hero" id="hero">
         <div class="hero-container">
-            <div class="hero-photo">
-            <img src="assets/Fayola.JPG" alt="Fayola Carani Malya">
-            </div>
             <div class="hero-text">
             <p class="hero-eyebrow" data-id="Halo, perkenalkan saya" data-en="Hi, let me introduce myself">Halo, perkenalkan saya</p>
             <h1 class="hero-name">Fayola Carani Malya</h1>
             <div class="hero-roles">
-                <span class="role-badge">Frontend Developer</span>
-                <span class="role-badge">System Analyst</span>
+                <span class="role-badge role-analyst">System Analyst</span>
+                <span class="role-badge role-frontend">Frontend Developer</span>
             </div>
-            <p class="hero-desc" id="hero-desc">
-                Fresh graduate D3 Teknologi Informasi Universitas Brawijaya (Cumlaude, GPA 3.90) dengan pengalaman merancang dan membangun sistem secara end-to-end — mulai dari analisis kebutuhan, perancangan (ERD, use case diagram, wireframe), hingga implementasi antarmuka web. Terbiasa bekerja lintas peran antara System Analyst dan Frontend Developer, sehingga memahami proses sistem sekaligus mampu mewujudkannya jadi produk nyata.</p>
+            <p class="hero-desc" id="hero-desc"> Fresh graduate D3 Teknologi Informasi Universitas Brawijaya (Cumlaude, GPA 3.90) 
+                dengan pengalaman merancang dan membangun sistem secara end-to-end — mulai dari analisis kebutuhan, perancangan (ERD, use case diagram, wireframe), 
+                hingga implementasi antarmuka web. Terbiasa bekerja lintas peran antara System Analyst dan Frontend Developer, sehingga memahami proses sistem sekaligus mampu mewujudkannya jadi produk nyata.
+            </p>
             <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary" data-id="Hubungi Saya" data-en="Contact Me">Hubungi Saya</a>
-                <a href="assets/CV_Fayola_Carani_Malya.pdf" class="btn btn-secondary" download data-id="Download CV" data-en="Download CV">Download CV</a>
+                <a href="assets/CV_Fayola Carani Malya.pdf" class="btn btn-primary" download data-id="Unduh CV" data-en="Download CV">Unduh CV</a>
+                <a href="#contact" class="btn btn-secondary" data-id="Hubungi Saya" data-en="Contact Me">Hubungi Saya</a>
             </div>
+            </div>
+
+            <div class="hero-photo">
+            <img src="assets/Fayola.JPG" alt="Fayola Carani Malya">
             </div>
         </div>
     </section>
 
-    <!--experience-->>
-    <section class="experience" id="experience">
+    <!-- Skill Matrix -->
+     <section class="skills" id="skills">
         <div class="section-container">
-            <h2 class="section-title" data-id="Pengalaman" data-en="Experience">Pengalaman</h2>
-            <div class="timeline" id="timeline"></div>
+            <h2 class="section-title" data-id="Keahlian" data-en="Skills">Keahlian</h2>
+
+            <div class="skills-matrix">
+                <div class="skill-column skill-analyst">
+                    <h3 class="skill-column-title" data-id="Analisis & Struktur" data-en="Analysis & Structure">Analisis & Struktur</h3>
+                    <div class="skill-tags" id="analyst-skills"></div>
+                </div>
+
+            <div class="skill-column skill-frontend">
+                <h3 class="skill-column-title" data-id="Kode & Antarmuka" data-en="Code & Interface">Kode & Antarmuka</h3>
+                <div class="skill-tags" id="frontend-skills"></div>
+
+                <div class="tech-icons">
+                    <div class="tech-icons-row">
+                        <div class="tech-icon" title="HTML5"><i class="devicon-html5-plain colored"></i></div>
+                        <div class="tech-icon" title="CSS3"><i class="devicon-css3-plain colored"></i></div>
+                        <div class="tech-icon" title="JavaScript"><i class="devicon-javascript-plain colored"></i></div>
+                        <div class="tech-icon" title="PHP"><i class="devicon-php-plain colored"></i></div>
+                        <div class="tech-icon" title="Laravel"><i class="devicon-laravel-plain colored"></i></div>
+                        <div class="tech-icon" title="MySQL"><i class="devicon-mysql-plain colored"></i></div>
+                        <div class="tech-icon" title="React"><i class="devicon-react-original colored"></i></div>
+                        <div class="tech-icon" title="Figma"><i class="devicon-figma-plain colored"></i></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <!--  Projects -->
-    <section class="projects" id="projects">
+
+    <!-- Projects -->
+     <section class="projects" id="projects">
         <div class="section-container">
-            <h2 class="section-title" data-id="Proyek" data-en="Projects">Proyek</h2>
-            <div class="project-grid" id="project-grid"></div>
+            <p class="section-eyebrow" data-id="Proyek Unggulan" data-en="Featured Projects">Proyek Unggulan</p>
+            <h2 class="section-title" data-id="Beberapa Karya Terbaru Saya" data-en="Some of My Recent Work">Beberapa Karya Terbaru Saya</h2>
+
+            <div class="carousel-wrapper">
+                <button class="carousel-arrow carousel-arrow-left" id="carousel-prev">‹</button>
+                <div class="carousel-track" id="project-carousel"></div>
+                <button class="carousel-arrow carousel-arrow-right" id="carousel-next">›</button>
+            </div>
         </div>
     </section>
 
     <!-- Certifications -->
-    <section class="certifications" id="certifications">
+     <section class="certifications" id="certifications">
         <div class="section-container">
             <h2 class="section-title" data-id="Sertifikasi" data-en="Certifications">Sertifikasi</h2>
-            <div class="cert-grid" id="cert-grid"></div>
+            <div class="carousel-wrapper">
+                <button class="carousel-arrow carousel-arrow-left" id="cert-carousel-prev">‹</button>
+                <div class="carousel-track" id="cert-grid"></div>
+                <button class="carousel-arrow carousel-arrow-right" id="cert-carousel-next">›</button>
+            </div>        
         </div>
     </section>
 
-    <!-- Section: Contact akan di sini -->
+    <!-- Education -->
+    <section class="education" id="education">
+        <div class="section-container">
+            <h2 class="section-title" data-id="Pendidikan" data-en="Education">Pendidikan</h2>
+            <div class="edu-list" id="edu-list"></div>
+        </div>
+    </section>
+
+    <!-- Experience (Magang) -->
+    <!-- Organizations -->
+    <!-- Contact -->
+
+    <!--Modal Lihat Detail-->
     <div class="modal-overlay" id="detail-modal">
         <div class="modal-box">
             <button class="modal-close" id="modal-close">&times;</button>
             <div id="modal-body"></div>
         </div>
     </div>
+
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animation.js"></script>
