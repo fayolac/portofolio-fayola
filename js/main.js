@@ -72,27 +72,46 @@ function renderProjects(lang) {
       ? `<span class="status-tag status-ongoing">${lang === 'id' ? 'Ongoing' : 'Ongoing'}</span>`
       : `<span class="status-tag status-completed">${lang === 'id' ? 'Selesai' : 'Completed'}</span>`;
 
+    const roleLabel = isHybrid
+      ? 'Dual Expertise'
+      : proj.accent === 'analyst' ? 'System Analyst' : 'Frontend Developer';
+
     card.innerHTML = `
-      <div class="project-card-top">
-        <span class="project-number">${String(index + 1).padStart(2, '0')}</span>
-        ${statusHTML}
+      <div class="card-flip">
+        <div class="card-face card-front">
+          <div class="project-card-top">
+            <span class="project-number">${String(index + 1).padStart(2, '0')}</span>
+            ${statusHTML}
+          </div>
+          <div class="project-thumb"></div>
+          <h3 class="project-card-title">${proj.title}</h3>
+          <p class="project-card-desc">${proj.shortDesc[lang]}</p>
+          <button class="project-view-btn" data-type="project" data-index="${index}">
+            <span data-id="Lihat Detail" data-en="View Project">Lihat Detail</span> →
+          </button>
+        </div>
+
+        <div class="card-face card-back">
+          <p class="card-back-label" data-id="Kontribusi Utama" data-en="Main Contribution">Kontribusi Utama</p>
+          <span class="role-badge-sm accent-${proj.accent}">${roleLabel}</span>
+          <div class="project-stack" style="margin-top:0.85rem;">
+            ${proj.stack.map(s => `<span class="stack-tag">${s}</span>`).join('')}
+          </div>
+          <button class="project-view-btn card-back-cta" data-type="project" data-index="${index}">
+            <span data-id="Lihat Studi Kasus" data-en="View Case Study">Lihat Studi Kasus</span> →
+          </button>
+        </div>
       </div>
-      <div class="project-thumb"></div>
-      <h3 class="project-card-title">${proj.title}</h3>
-      <p class="project-card-desc">${proj.shortDesc[lang]}</p>
-      <button class="project-view-btn" data-type="project" data-index="${index}">
-        <span data-id="Lihat Detail" data-en="View Project">Lihat Detail</span> →
-      </button>
     `;
 
     if (isHybrid) {
       const backing = document.createElement('div');
       backing.classList.add('hybrid-backing');
       backing.appendChild(card);
-      
+
       const wrapper = document.createElement('div');
       wrapper.classList.add('hybrid-wrapper');
-      wrapper.appendChild(card);
+      wrapper.appendChild(backing);
 
       carousel.appendChild(wrapper);
     } else {
@@ -140,9 +159,9 @@ function renderModalContent() {
   if (activeModal.type === 'project') {
     const proj = projects[activeModal.index];
     const photosHTML = proj.photos.map(src => `<img src="${src}" alt="${proj.title}">`).join('');
-    const linkHTML = proj.link
-      ? `<a href="${proj.link}" target="_blank" class="btn btn-primary modal-link">${lang === 'id' ? 'Lihat Hasil Deploy' : 'View Live Result'} ↗</a>`
-      : '';
+    const linkHTML = proj.links.map(l =>
+      `<a href="${l.url}" target="_blank" class="btn btn-primary modal-link">${l.label[lang]} ↗</a>`
+    ).join(' ');
     const statusText = proj.status === 'ongoing'
       ? (lang === 'id' ? 'Ongoing' : 'Ongoing')
       : (lang === 'id' ? 'Selesai' : 'Completed');

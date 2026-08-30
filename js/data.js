@@ -3,6 +3,15 @@ const heroText = {
   en: "Fresh graduate in Information Technology from Universitas Brawijaya (Cumlaude, GPA 3.90) with experience designing and building systems end-to-end — from requirement analysis and design (ERD, use case diagrams, wireframes) to web interface implementation. Experienced working across System Analyst and Frontend Developer roles, combining an understanding of system processes with the ability to bring them to life as real products."
 };
 
+const heroNameText = "Fayola Carani Malya";
+
+const codeSnippetText = `const architect = {
+  name: "Fayola Carani Malya",
+  role: ["Frontend Dev", "System Analyst"],
+  gpa: 3.90,
+  status: "Open to work"
+};`;
+
 const analystSkills = [
   { id: "Use Case Diagram", en: "Use Case Diagram" },
   { id: "ERD", en: "ERD" },
@@ -76,7 +85,10 @@ const projects = [
     analysis: { id: "ERD, Activity Diagram, Wireframe, dan Requirement Gathering ke pemilik kos untuk memetakan kebutuhan sistem.", en: "ERD, Activity Diagram, Wireframe, and Requirement Gathering with the property owner to map system needs." },
     solution: { id: "Membangun website untuk promosi, reservasi kamar jarak jauh, rekapitulasi pemasukan-pengeluaran, dan rekap penghuni per kamar. Hasilnya, promosi tersebar hingga luar Kota Malang, rekap keuangan jadi lebih akurat, dan riwayat pengaduan tidak lagi hilang.", en: "Built a website for promotion, remote room reservation, income-expense recap, and per-room resident recap. As a result, promotion reached beyond Malang City, financial records became more accurate, and complaint history was no longer lost." },
     photos: [],
-    link: "https://rumahkosfaira.freepage.cc/"
+    links: [
+      { label: { id: "Lihat Website", en: "View Website" }, url: "https://rumahkosfaira.freepage.cc/" },
+      { label: { id: "Lihat Desain Figma", en: "View Figma Design" }, url: "https://figma.com/link-kamu" }
+    ]
   },
   {
     id: "sporton",
@@ -89,7 +101,9 @@ const projects = [
     analysis: { id: "ERD, merumuskan spesifikasi fitur, dan requirement gathering ke pemilik toko.", en: "ERD, defining feature specifications, and requirement gathering with the store owner." },
     solution: { id: "Membangun website e-commerce dengan pengecekan keuangan melalui website dan integrasi database dengan kondisi stok barang sebenarnya. Hasilnya, toko bisa menerima pesanan 24/7, perhitungan stok otomatis, dan pemasukan terdokumentasi rapi.", en: "Built an e-commerce website with income tracking on the site and database integration with real-time stock. As a result, the store can accept orders 24/7, stock calculation is automatic, and income is documented accurately." },
     photos: [],
-    link: "https://sporton-fe-vercel-deploy-fawn.vercel.app/"
+    links: [
+      { label: { id: "Lihat Website", en: "View Website" }, url: "https://sporton-fe-vercel-deploy-fawn.vercel.app/" },
+    ]
   },
   {
     id: "umkm-portal",
@@ -102,7 +116,10 @@ const projects = [
     analysis: { id: "Wireframe, User Flow, ERD, Design System, hingga High-fidelity design di Figma.", en: "Wireframe, User Flow, ERD, Design System, through High-fidelity design in Figma." },
     solution: { id: "Dashboard katalog singkat toko UMKM, kategori UMKM, dan hero section sudah dibangun dan live. Backend serta alur pembelian penuh masih dalam pengembangan lanjutan.", en: "A short SME catalog dashboard, SME categories, and hero section are built and live. Backend and full purchase flow are still under further development." },
     photos: [],
-    link: ""
+    links: [
+      { label: { id: "Lihat Website", en: "View Website" }, url: "https://rumahkosfaira.freepage.cc/" },
+      { label: { id: "Lihat Desain Figma", en: "View Figma Design" }, url: "#soon" }
+    ]
   },
   {
     id: "e-score",

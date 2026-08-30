@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -44,10 +46,9 @@
         <div class="hero-container">
             <div class="hero-text">
             <p class="hero-eyebrow" data-id="Halo, perkenalkan saya" data-en="Hi, let me introduce myself">Halo, perkenalkan saya</p>
-            <h1 class="hero-name">Fayola Carani Malya</h1>
-            <div class="hero-roles">
-                <span class="role-badge role-analyst">System Analyst</span>
+            <h1 class="hero-name"><span id="hero-name-typed"></span><span class="code-cursor hero-name-cursor">|</span></h1>            <div class="hero-roles">
                 <span class="role-badge role-frontend">Frontend Developer</span>
+                <span class="role-badge role-analyst">System Analyst</span>
             </div>
             <p class="hero-desc" id="hero-desc"> Fresh graduate D3 Teknologi Informasi Universitas Brawijaya (Cumlaude, GPA 3.90) 
                 dengan pengalaman merancang dan membangun sistem secara end-to-end — mulai dari analisis kebutuhan, perancangan (ERD, use case diagram, wireframe), 
@@ -59,8 +60,20 @@
             </div>
             </div>
 
-            <div class="hero-photo">
-            <img src="assets/Fayola.JPG" alt="Fayola Carani Malya">
+            <div class="hero-photo-wrap">
+                <div class="hero-photo">
+                    <img src="assets/Fayola.JPG" alt="Fayola Carani Malya">
+                </div>
+
+                <div class="code-snippet">
+                    <div class="code-snippet-header">
+                    <span class="code-dot dot-red"></span>
+                    <span class="code-dot dot-yellow"></span>
+                    <span class="code-dot dot-green"></span>
+                    <span class="code-snippet-title">architect.js</span>
+                    </div>
+                    <pre class="code-snippet-body"><code id="code-typed"></code><span class="code-cursor">|</span></pre>
+                </div>
             </div>
         </div>
     </section>
