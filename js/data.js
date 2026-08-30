@@ -206,7 +206,7 @@ const certifications = [
     score: "463",
     description: { id: "Tes kemampuan Bahasa Inggris resmi Universitas Brawijaya, mengukur kemampuan membaca, mendengar, dan struktur bahasa.", en: "Universitas Brawijaya's official English proficiency test, measuring reading, listening, and structure skills." },
     photos: [],
-    link: ""
+    link: "assets/TOEFL Sertifikat.pdf"
   }
 ];
 
