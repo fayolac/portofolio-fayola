@@ -6,7 +6,9 @@ const heroText = {
 const analystSkills = [
   { id: "Use Case Diagram", en: "Use Case Diagram" },
   { id: "ERD", en: "ERD" },
+  { id: "Activity Diagram", en: "Activity Diagram" },
   { id: "Flowchart", en: "Flowchart" },
+  { id: "SiteMap", en: "SiteMap" },
   { id: "Requirement Gathering", en: "Requirement Gathering" },
   { id: "Wireframing", en: "Wireframing" },
   { id: "Database Design (MySQL)", en: "Database Design (MySQL)" }
@@ -21,43 +23,43 @@ const experiences = [
   {
     role: { id: "System Analyst Intern", en: "System Analyst Intern" },
     company: "CMLABS",
-    period: { id: "Agustus 2025 — Februari 2026", en: "August 2025 - February 2026"},
+    period: { id: "Agustus 2025 - February 2026", en: "August 2025 - February 2026" },
     points: [
       { id: "Menyusun dokumentasi analisis sistem berupa Use Case Diagram, Flowchart, ERD, dan Sitemap.", en: "Created system analysis documentation including Use Case Diagrams, Flowcharts, ERD, and Sitemaps." },
       { id: "Melakukan pengujian sistem CRM untuk memastikan fungsi berjalan sesuai kebutuhan.", en: "Tested a CRM system to ensure functions worked as required." }
     ],
     detail: {
-        description: { id:"", en:""},
-        photos: [],
-        link:""
+      description: { id: "ISI: cerita lebih detail apa yang kamu kerjakan sehari-hari di CMLABS...", en: "FILL: more detailed story of what you worked on daily at CMLABS..." },
+      photos: [],
+      link: ""
     }
   },
   {
     role: { id: "Web Developer & UI/UX Designer Intern", en: "Web Developer & UI/UX Designer Intern" },
     company: "PT Vinix7 Aurum",
-    period: { id: "Agustus 2025 — Desember 2025", en: "August 2025 - Desember 2025"},
+    period: { id: "Agustus - Desember 2025", en: "August - December 2025" },
     points: [
-        { id: "Merancang dan membangun UMKM Portal secara end-to-end, mulai dari wireframe, desain di Figma, hingga deployment.", en: "Designed and built UMKM Portal end-to-end, from wireframing and Figma design through deployment." },
-        { id: "Menyusun user flow dan design system untuk menjaga konsistensi antarmuka.", en: "Developed the user flow and design system to maintain interface consistency." }    
+      { id: "Merancang dan membangun UMKM Portal secara end-to-end, mulai dari wireframe, desain di Figma, hingga deployment.", en: "Designed and built UMKM Portal end-to-end, from wireframing and Figma design through deployment." },
+      { id: "Menyusun user flow dan design system untuk menjaga konsistensi antarmuka.", en: "Developed the user flow and design system to maintain interface consistency." }
     ],
     detail: {
-        description: { id:"", en:""},
-        photos: [],
-        link:""
+      description: { id: "ISI: cerita lebih detail pengalaman magang di Vinix7 Aurum...", en: "FILL: more detailed internship story at Vinix7 Aurum..." },
+      photos: [],
+      link: ""
     }
   },
   {
     role: { id: "IT Staff", en: "IT Staff" },
     company: "PT Halo Edukasi Indonesia (HelloCation Korea)",
-    period: { id: "Januari 2026 — Juni 2026", en: "January 2026 - June 2026"},
+    period: { id: "ISI: Januari — Juni 2026", en: "FILL: January - June 2026" },
     points: [
       { id: "Merevamp tampilan dan konten website perusahaan berbasis WordPress.", en: "Revamped the company's WordPress website design and content." },
       { id: "Mendukung tim IT dalam operasional teknis, termasuk penanganan teknis pada acara langsung (live event).", en: "Supported the IT team's technical operations, including live event technical support." }
     ],
     detail: {
-        description: { id:"", en:""},
-        photos: [],
-        link:""
+      description: { id: "ISI: cerita lebih detail pengalaman sebagai IT Staff di HelloCation Korea...", en: "FILL: more detailed story as IT Staff at HelloCation Korea..." },
+      photos: [],
+      link: ""
     }
   }
 ];
@@ -67,8 +69,8 @@ const projects = [
     id: "rumah-kos-faira",
     title: "Rumah Kos Faira",
     shortDesc: { id: "Sistem manajemen kos digital", en: "Digital boarding house management system" },
-    stack: ["Laravel", "MySQL"],
-    accent: "analyst",
+    stack: ["Laravel", "MySQL", "Bootstrap"],
+    accent: "hybrid",
     status: "completed",
     problem: { id: "Rumah kos Faira sering mengalami kesalahan tulis rekap keuangan, promosi masih kurang efektif karena hanya mengandalkan spanduk, belum ada rekap penghuni, dan pengaduan masih melalui chat pribadi sehingga sering tertimbun dan tidak ditanggapi.", en: "Rumah Kos Faira frequently had errors in manual financial records, relied only on banners for promotion, had no resident recap, and complaints were handled through personal chat, often getting buried and unanswered." },
     analysis: { id: "ERD, Activity Diagram, Wireframe, dan Requirement Gathering ke pemilik kos untuk memetakan kebutuhan sistem.", en: "ERD, Activity Diagram, Wireframe, and Requirement Gathering with the property owner to map system needs." },
@@ -93,8 +95,8 @@ const projects = [
     id: "umkm-portal",
     title: "UMKM Portal",
     shortDesc: { id: "Portal katalog UMKM Malang", en: "Malang SME catalog portal" },
-    stack: ["Figma", "Web Development"],
-    accent: "frontend",
+    stack: ["Figma", "Web Development, "],
+    accent: "hybrid",
     status: "ongoing",
     problem: { id: "UMKM di Kota Malang masih tergolong sepi kecuali beberapa yang terkenal, pendatang kesulitan mencari produk sesuai budget, dan proses pre-order makanan masih manual via chat.", en: "Most SMEs in Malang were overlooked except a few well-known ones, newcomers struggled to find products within budget, and food pre-orders were handled manually via chat." },
     analysis: { id: "Wireframe, User Flow, ERD, Design System, hingga High-fidelity design di Figma.", en: "Wireframe, User Flow, ERD, Design System, through High-fidelity design in Figma." },
@@ -107,7 +109,7 @@ const projects = [
     title: "E-Score",
     shortDesc: { id: "Aplikasi rapor online untuk guru", en: "Online report card app for teachers" },
     stack: ["UCD", "Web Development"],
-    accent: "analyst",
+    accent: "hybrid",
     status: "ongoing",
     problem: { id: "Guru masih mencatat nilai secara manual, proses hitung rata-rata rawan human error, dan data absensi yang berpengaruh ke penilaian masih terpisah dari proses ini.", en: "Teachers still recorded grades manually, average calculations were prone to human error, and attendance data affecting grades was disconnected from the process." },
     analysis: { id: "Observasi kebiasaan guru menulis nilai manual, dipetakan menjadi kebutuhan input nilai digital, kalkulasi otomatis, rekap absensi terintegrasi, dan output rapor otomatis (metodologi UCD).", en: "Observation of teachers' manual grading habits, mapped into needs for digital input, automatic calculation, integrated attendance recap, and automatic report output (UCD methodology)." },
@@ -133,7 +135,7 @@ const projects = [
     title: "Web Perpustakaan",
     shortDesc: { id: "Sistem peminjaman buku digital", en: "Digital book borrowing system" },
     stack: ["Laravel", "HTML", "CSS"],
-    accent: "analyst",
+    accent: "frontend",
     status: "ongoing",
     problem: { id: "Tugas kampus untuk membangun sistem peminjaman dan pengembalian buku secara digital, menggantikan pencatatan manual.", en: "A university assignment to build a digital book borrowing and return system, replacing manual recording." },
     analysis: { id: "Perancangan dashboard, kategori buku, dan halaman detail buku.", en: "Designing the dashboard, book categories, and book detail pages." },
@@ -146,7 +148,7 @@ const projects = [
     title: "IoT + Web Lampu Jalan Otomatis",
     shortDesc: { id: "Sistem lampu jalan otomatis berbasis sensor", en: "Sensor-based automatic street light system" },
     stack: ["IoT", "Web Development"],
-    accent: "analyst",
+    accent: "frontend",
     status: "completed",
     problem: { id: "Kawasan rumah sering lupa menyalakan lampu jalan sehingga gelap dan rawan kecelakaan/kejahatan, atau lupa mematikannya sehingga boros listrik.", en: "Residential areas often forgot to turn on street lights, causing accident/crime risk, or forgot to turn them off, wasting electricity." },
     analysis: { id: "Berperan sebagai analyst sekaligus membantu development IoT dalam tim; sistem dirancang agar lampu otomatis menyala saat ada kendaraan lewat, hujan, atau kondisi gelap, dengan monitoring via grafik di website.", en: "Role as analyst while also assisting IoT development within the team; system designed so lights auto-activate when a vehicle passes, it rains, or it's dark, with monitoring via a web graph." },
@@ -195,6 +197,39 @@ const education = [
     extra: { id: "86", en: "86"},
     detail: {
       description: { id: "ISI: cerita singkat masa SMA, kegiatan ekstrakurikuler, atau prestasi (opsional)...", en: "FILL: brief high school story, extracurriculars, or achievements (optional)..." },
+      photos: [],
+      link: ""
+    }
+  }
+];
+
+const organizations = [
+  {
+    role: { id: "Staf Finance & Fundraising", en: "Finance & Fundraising Staff" },
+    org: "UABT UB",
+    period: { id: "ISI: Bulan Tahun — Bulan Tahun", en: "FILL: Month Year — Month Year" },
+    detail: {
+      description: { id: "ISI: cerita kontribusi kamu di UABT UB, tugas sehari-hari, pencapaian...", en: "FILL: your contribution story at UABT UB, daily tasks, achievements..." },
+      photos: [],
+      link: ""
+    }
+  },
+  {
+    role: { id: "Staf Ekonomi Kreatif", en: "Creative Economy Staff" },
+    org: "Senyum Anak Nusantara Chapter Malang",
+    period: { id: "ISI: Bulan Tahun — Bulan Tahun", en: "FILL: Month Year — Month Year" },
+    detail: {
+      description: { id: "ISI: cerita kontribusi kamu sebagai Staf Ekonomi Kreatif...", en: "FILL: your contribution story as Creative Economy Staff..." },
+      photos: [],
+      link: ""
+    }
+  },
+  {
+    role: { id: "Staf Media & Komunikasi", en: "Media & Communication Staff" },
+    org: "Senyum Anak Nusantara Chapter Malang",
+    period: { id: "ISI: Bulan Tahun — Bulan Tahun", en: "FILL: Month Year — Month Year" },
+    detail: {
+      description: { id: "ISI: cerita kontribusi kamu sebagai Staf Media & Komunikasi...", en: "FILL: your contribution story as Media & Communication Staff..." },
       photos: [],
       link: ""
     }

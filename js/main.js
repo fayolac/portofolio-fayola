@@ -23,6 +23,8 @@ function updateLanguage(lang) {
   renderModalContent(lang);
   renderCertifications(lang);
   renderEducation(lang);
+  renderExperience(lang);
+  renderOrganizations(lang);
 }
 
 // ===== THEME TOGGLE =====
@@ -61,11 +63,13 @@ function renderProjects(lang) {
   carousel.innerHTML = '';
 
   projects.forEach((proj, index) => {
+    const isHybrid = proj.accent === 'hybrid';
     const card = document.createElement('div');
-    card.classList.add('project-card', `accent-${proj.accent}`);
+    card.classList.add('project-card');
+    if (!isHybrid) card.classList.add(`accent-${proj.accent}`);
 
     const statusHTML = proj.status === 'ongoing'
-      ? `<span class="status-tag status-ongoing">${lang === 'id' ? 'Berjalan' : 'Ongoing'}</span>`
+      ? `<span class="status-tag status-ongoing">${lang === 'id' ? 'Ongoing' : 'Ongoing'}</span>`
       : `<span class="status-tag status-completed">${lang === 'id' ? 'Selesai' : 'Completed'}</span>`;
 
     card.innerHTML = `
@@ -80,7 +84,20 @@ function renderProjects(lang) {
         <span data-id="Lihat Detail" data-en="View Project">Lihat Detail</span> →
       </button>
     `;
-    carousel.appendChild(card);
+
+    if (isHybrid) {
+      const backing = document.createElement('div');
+      backing.classList.add('hybrid-backing');
+      backing.appendChild(card);
+      
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('hybrid-wrapper');
+      wrapper.appendChild(card);
+
+      carousel.appendChild(wrapper);
+    } else {
+      carousel.appendChild(card);
+    }
   });
 }
 
@@ -206,6 +223,41 @@ function renderModalContent() {
       ${linkHTML}
     `;
   }
+  //Menampilkan Modal Magang
+  else if (activeModal.type === 'experience') {
+  const exp = experiences[activeModal.index];
+  const photosHTML = exp.detail.photos.map(src => `<img src="${src}" alt="${exp.company}">`).join('');
+  const linkHTML = exp.detail.link
+    ? `<a href="${exp.detail.link}" target="_blank" class="btn btn-primary modal-link">${lang === 'id' ? 'Lihat Hasil' : 'View Result'} ↗</a>`
+    : '';
+
+  modalBody.innerHTML = `
+    <h3 class="modal-title">${exp.role[lang]}</h3>
+    <p class="exp-company">${exp.company} · ${exp.period[lang]}</p>
+    <ul class="exp-points" style="margin-top:1rem;">
+      ${exp.points.map(p => `<li>${p[lang]}</li>`).join('')}
+    </ul>
+    <p style="margin-top:1rem; color:var(--text-primary); line-height:1.65;">${exp.detail.description[lang]}</p>
+    <div class="modal-photos" style="margin-top:1.25rem;">${photosHTML}</div>
+    ${linkHTML}
+  `;
+  }
+  //Modal Organisasi
+  else if (activeModal.type === 'organization') {
+  const org = organizations[activeModal.index];
+  const photosHTML = org.detail.photos.map(src => `<img src="${src}" alt="${org.org}">`).join('');
+  const linkHTML = org.detail.link
+    ? `<a href="${org.detail.link}" target="_blank" class="btn btn-primary modal-link">${lang === 'id' ? 'Lihat Hasil' : 'View Result'} ↗</a>`
+    : '';
+
+  modalBody.innerHTML = `
+    <h3 class="modal-title">${org.role[lang]}</h3>
+    <p class="org-name">${org.org} · ${org.period[lang]}</p>
+    <p style="margin-top:1rem; color:var(--text-primary); line-height:1.65;">${org.detail.description[lang]}</p>
+    <div class="modal-photos" style="margin-top:1.25rem;">${photosHTML}</div>
+    ${linkHTML}
+  `;
+}
 }
 
 document.addEventListener('click', (e) => {
@@ -271,6 +323,47 @@ function renderEducation(lang) {
   });
 }
 
+//EXPERIENCE (MAGANG)
+function renderExperience(lang) {
+  const list = document.getElementById('exp-list');
+  list.innerHTML = '';
+
+  experiences.forEach((exp, index) => {
+    const item = document.createElement('div');
+    item.classList.add('exp-item');
+    item.innerHTML = `
+      <div class="exp-info">
+        <h3 class="exp-role">${exp.role[lang]}</h3>
+        <p class="exp-company">${exp.company} · <span class="exp-period">${exp.period[lang]}</span></p>
+        <ul class="exp-points">
+          ${exp.points.map(p => `<li>${p[lang]}</li>`).join('')}
+        </ul>
+      </div>
+      <button class="detail-btn" data-type="experience" data-index="${index}" data-id="Lihat Detail" data-en="View Detail">Lihat Detail</button>
+    `;
+    list.appendChild(item);
+  });
+}
+
+//EDUCATION
+function renderOrganizations(lang) {
+  const list = document.getElementById('org-list');
+  list.innerHTML = '';
+
+  organizations.forEach((org, index) => {
+    const item = document.createElement('div');
+    item.classList.add('org-item');
+    item.innerHTML = `
+      <div class="org-info">
+        <h3 class="org-role">${org.role[lang]}</h3>
+        <p class="org-name">${org.org} · <span class="org-period">${org.period[lang]}</span></p>
+      </div>
+      <button class="detail-btn detail-btn-sm" data-type="organization" data-index="${index}" data-id="Lihat Detail" data-en="View Detail">Lihat Detail</button>
+    `;
+    list.appendChild(item);
+  });
+}
+
 initCarouselArrows('project-carousel', 'carousel-prev', 'carousel-next');
 initCarouselArrows('cert-grid', 'cert-carousel-prev', 'cert-carousel-next');
 initThemeToggle();
@@ -279,3 +372,5 @@ renderProjects(currentLang);
 renderModalContent(currentLang);
 renderCertifications(currentLang);
 renderEducation(currentLang);
+renderExperience(currentLang);
+renderOrganizations(currentLang);
