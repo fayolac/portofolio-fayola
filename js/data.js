@@ -77,7 +77,7 @@ const projects = [
   {
     id: "rumah-kos-faira",
     title: "Rumah Kos Faira",
-    thumbnail: "",
+    thumbnail: "assets/rumahkosTN.png",
     shortDesc: { id: "Sistem manajemen kos digital", en: "Digital boarding house management system" },
     stack: ["Laravel", "MySQL", "Bootstrap"],
     accent: "hybrid",
@@ -93,7 +93,7 @@ const projects = [
   {
     id: "sporton",
     title: "SportOn",
-    thumbnail: "",
+    thumbnail: "assets/sportonTN.png",
     shortDesc: { id: "E-commerce toko olahraga", en: "Sports store e-commerce platform" },
     stack: ["ReactJS", "Vercel"],
     accent: "frontend",
@@ -207,7 +207,25 @@ const certifications = [
     description: { id: "Tes kemampuan Bahasa Inggris resmi Universitas Brawijaya, mengukur kemampuan membaca, mendengar, dan struktur bahasa.", en: "Universitas Brawijaya's official English proficiency test, measuring reading, listening, and structure skills." },
     photos: [],
     link: "assets/TOEFL Sertifikat.pdf"
-  }
+  },
+  {
+    title: { id: "Microsoft Office Dekstop Application", en: "Microsoft Office Dekstop Application" },
+    issuer: "Trust Training Partners",
+    year: "2025",
+    description: { id: "Ujian sertifikasi kompetensi untuk mengukur dan memvalidasi keahlian seseorang dalam mengoperasikan aplikasi perkantoran Microsoft Office. Ujian ini berbasis komputer dan umumnya mencakup 3 aplikasi utama (Microsoft Word, Microsoft Excel, Microsoft PowerPoint) yang diujikan.", 
+                  en: "A competency certification exam designed to measure and validate proficiency in operating Microsoft Office desktop applications. This computer-based test generally covers three core applications: Microsoft Word, Microsoft Excel, and Microsoft PowerPoint." },
+    photos: [],
+    link: "assets/ICT.pdf"
+  },
+  {
+    title: { id: "Web Programming Futuremakers Youth Employability Programme", en: "Web Programming Futuremakers Youth Employability Programme" },
+    issuer: "Yayasan Plan Internasional Indonesia",
+    year: "2025",
+    description: { id: "Web Programming FYEP adalah program pelatihan teknologi intensif gratis yang berfokus pada pengembangan front-end web development untuk meningkatkan kesiapan kerja generasi muda. Diselenggarakan oleh Plan Indonesia dan didanai oleh Standard Chartered Foundation melalui inisiatif global Futuremakers, program ini membekali peserta dengan keterampilan teknis modern, sertifikasi resmi, serta dukungan penempatan kerja langsung ke industri teknologi.", 
+                  en: "Web Programming FYEP is a free, intensive tech training program focused on front-end web development to boost youth employability. Organized by Plan Indonesia and funded by the Standard Chartered Foundation through the global Futuremakers initiative, it provides students with modern technical skills, official certification, and direct job placement support into the tech industry."},
+    photos: [],
+    link: "assets/WebProg_FYEP.pdf"
+  },
 ];
 
 const education = [
