@@ -76,6 +76,9 @@ function renderProjects(lang) {
       ? 'Dual Expertise'
       : proj.accent === 'analyst' ? 'System Analyst' : 'Frontend Developer';
 
+    const thumbHTML = proj.thumbnail
+      ? `<div class="project-thumb" style="background-image:url('${proj.thumbnail}')"></div>`
+      : `<div class="project-thumb"></div>`;
     card.innerHTML = `
       <div class="card-flip">
         <div class="card-face card-front">
@@ -83,7 +86,7 @@ function renderProjects(lang) {
             <span class="project-number">${String(index + 1).padStart(2, '0')}</span>
             ${statusHTML}
           </div>
-          <div class="project-thumb"></div>
+          ${thumbHTML}
           <h3 class="project-card-title">${proj.title}</h3>
           <p class="project-card-desc">${proj.shortDesc[lang]}</p>
           <button class="project-view-btn" data-type="project" data-index="${index}">
@@ -159,9 +162,9 @@ function renderModalContent() {
   if (activeModal.type === 'project') {
     const proj = projects[activeModal.index];
     const photosHTML = proj.photos.map(src => `<img src="${src}" alt="${proj.title}">`).join('');
-    const linkHTML = proj.links.map(l =>
-      `<a href="${l.url}" target="_blank" class="btn btn-primary modal-link">${l.label[lang]} ↗</a>`
-    ).join(' ');
+    const linkHTML = proj.links && proj.links.length > 0
+      ? proj.links.map(l => `<a href="${l.url}" target="_blank" class="btn btn-primary modal-link">${l.label[lang]} ↗</a>`).join(' ')
+      : `<span class="btn btn-disabled modal-link">${lang === 'id' ? 'Segera Hadir' : 'Coming Soon'}</span>`;
     const statusText = proj.status === 'ongoing'
       ? (lang === 'id' ? 'Ongoing' : 'Ongoing')
       : (lang === 'id' ? 'Selesai' : 'Completed');
