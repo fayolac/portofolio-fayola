@@ -87,7 +87,7 @@ const projects = [
     solution: { id: "Merancang aplikasi web multi-role yang mendukung 3 tipe pengguna, didukung oleh diagram UML (use case, activity, ERD) sebagai fondasi struktural alur sistem dan desain database. Proyek ini mendapat evaluasi akademik yang sangat baik dari dosen pembimbing.", en: "Designed a multi-role web application supporting 3 user types, backed by UML diagrams (use case, activity, ERD) as the structural foundation for system flow and database design. The project received strong academic evaluation from the supervising lecturer." },    photos: [],
     links: [
       { label: { id: "Lihat Website", en: "View Website" }, url: "https://rumahkosfaira.freepage.cc/" },
-      //{ label: { id: "Lihat Desain Figma", en: "View Figma Design" }, url: "https://figma.com/link-kamu" }
+      { label: { id: "Lihat Rancangan Analis", en: "View Analyst Design" }, url: "https://drive.google.com/drive/folders/1WjumvfbCZ5VanPaXFUeUVwyihSBNxFmZ?usp=sharing" }
     ]
   },
   {
@@ -142,7 +142,7 @@ const projects = [
   {
     id: "gapura-ub",
     title: "Gapura UB Redesign",
-    thumbnail: "",
+    thumbnail: "assets/gapura.png",
     shortDesc: { id: "Redesain UI/UX aplikasi kampus", en: "Campus app UI/UX redesign" },
     stack: ["Figma", "UI/UX"],
     accent: "uiux",
