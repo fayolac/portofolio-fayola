@@ -48,8 +48,8 @@ const experiences = [
     company: "PT Vinix7 Aurum",
     period: { id: "Agustus - Desember 2025 (5 Bulan)", en: "August - December 2025 (5 Months)" },
     points: [
-      { id: "Merancang pengalaman UMKM Portal secara end-to-end menggunakan Figma — mencakup riset pengguna, wireframing, prototyping, dan usability testing; proyek berhasil di-deploy sebagai capstone magang.", en: "Designed an end-to-end UMKM Portal experience using Figma, covering user research, wireframing, prototyping, and usability testing; project successfully deployed online as the primary internship deliverable." },
-      { id: "Membangun dan mempublikasikan fondasi front-end website menggunakan HTML, CSS, JavaScript, Bootstrap, dan GitHub Pages, menghasilkan antarmuka yang responsif dan aksesibel.", en: "Built and published the foundational front-end of the website using HTML, CSS, JavaScript, Bootstrap, and GitHub Pages, delivering a responsive and accessible interface." }
+      { id: "Merancang konsep UMKM Portal di Figma — mencakup riset, wireframing, prototyping", en: "Designed an end-to-end UMKM Portal experience using Figma, covering user research, wireframing, prototyping, and usability testing; project successfully deployed online as the primary internship deliverable." },
+      { id: "Membangun dan mempublikasikan fondasi front-end website menggunakan HTML, CSS, JavaScript, Bootstrap, dan GitHub Pages, menghasilkan antarmuka yang responsif dan fleksibel yang mencakup dashboard.", en: "Built and published the foundational front-end of the website using HTML, CSS, JavaScript, Bootstrap, and GitHub Pages, delivering a responsive and accessible interface." }
     ],
     detail: {
       description: { id: "Selama magang di Vinix7, saya mengerjakan pengembangan produk end-to-end untuk Portal UMKM Kota Malang — mulai dari riset pengguna, desain UI/UX di Figma, hingga implementasi front-end menggunakan HTML, CSS, JavaScript, dan Bootstrap. Proyek ini berhasil di-deploy secara online sebagai deliverable utama magang, dengan usability yang diuji dan disempurnakan lewat proses iteratif. Pengalaman ini memperkuat kemampuan saya membangun produk web yang berfokus pada pengguna dari konsep hingga deployment, dalam lingkungan kerja remote yang kolaboratif.", en: "During my internship at Vinix7, I worked on end-to-end product development for the Portal UMKM Kota Malang — from user research and UI/UX design in Figma to front-end implementation using HTML, CSS, JavaScript, and Bootstrap. The project was successfully deployed online as the primary internship deliverable, with usability tested and refined through an iterative process. This experience strengthened my ability to build user-focused web products from concept to deployment in a fully remote, collaborative environment." },
@@ -107,14 +107,14 @@ const projects = [
   },
   {
     id: "umkm-portal",
-    title: "UMKM Portal",
-    thumbnail: "",
-    shortDesc: { id: "Portal katalog UMKM Malang", en: "Malang SME catalog portal" },
+    title: "Dashboard UMKM Portal",
+    thumbnail: "assets/umkm.png",
+    shortDesc: { id: "Dashboard Portal katalog UMKM Malang", en: "Malang SME dashboard catalog portal" },
     stack: ["Figma", "Web Development, "],
     accent: "hybrid",
-    status: "ongoing",
+    status: "completed",
     problem: { id: "UMKM di Kota Malang masih tergolong sepi kecuali beberapa yang terkenal, pendatang kesulitan mencari produk sesuai budget, dan proses pre-order makanan masih manual via chat.", en: "Most SMEs in Malang were overlooked except a few well-known ones, newcomers struggled to find products within budget, and food pre-orders were handled manually via chat." },
-    analysis: { id: "Wireframe, User Flow, ERD, Design System, hingga High-fidelity design di Figma.", en: "Wireframe, User Flow, ERD, Design System, through High-fidelity design in Figma." },
+    analysis: { id: "Wireframe, User Flow, ERD, Design System di Figma.", en: "Wireframe, User Flow, ERD, Design System, through High-fidelity design in Figma." },
     solution: { id: "Dashboard katalog singkat toko UMKM, kategori UMKM, dan hero section sudah dibangun dan live. Backend serta alur pembelian penuh masih dalam pengembangan lanjutan.", en: "A short SME catalog dashboard, SME categories, and hero section are built and live. Backend and full purchase flow are still under further development." },
     photos: [],
     links: [
@@ -125,7 +125,7 @@ const projects = [
   {
     id: "e-score",
     title: "E-Score",
-    thumbnail: "",
+    thumbnail: "assets/escore.png",
     shortDesc: { id: "Aplikasi rapor online untuk guru", en: "Online report card app for teachers" },
     stack: ["UCD", "Web Development"],
     accent: "hybrid",
@@ -135,8 +135,8 @@ const projects = [
     solution: { id: "Dirancang sebagai aplikasi rapor online dengan input nilai digital, kalkulasi rata-rata otomatis, rekap absensi, dan output langsung berbentuk rapor. Saat ini dashboard perkenalan sudah dibangun, fitur inti masih dalam pengembangan.", en: "Designed as an online report card app with digital grade input, automatic average calculation, attendance recap, and direct report output. Currently, an introductory dashboard is built; core features are still under development." },
     photos: [],
     links: [
-          //{ label: { id: "Lihat Website", en: "View Website" }, url: "https://fayolac.github.io/umkm-malang-company/" },
-          //{ label: { id: "Lihat Desain Figma", en: "View Figma Design" }, url: "#soon" }
+          //{ label: { id: "Lihat Website", en: "View Website" }, url: "" },
+          { label: { id: "Lihat Desain Figma (Mobile)", en: "View Figma Design (Mobile)" }, url: "https://www.figma.com/design/TnG6UbYVkJ8yWjKTDstbc0/WireFrame-E-Score?node-id=25-381&t=1engQWAuRSFpPboY-1" }
     ]  
     },
   {
@@ -145,7 +145,7 @@ const projects = [
     thumbnail: "",
     shortDesc: { id: "Redesain UI/UX aplikasi kampus", en: "Campus app UI/UX redesign" },
     stack: ["Figma", "UI/UX"],
-    accent: "frontend",
+    accent: "uiux",
     status: "completed",
     problem: { id: "Aplikasi Gapura UB kurang optimal — belum ada fitur tugas/grup/materi kelas sehingga mahasiswa perlu aplikasi ketiga, auto-logout tiap membuka app, dan berita harus dibaca di luar aplikasi.", en: "The Gapura UB app was suboptimal — lacking class assignments, groups, and materials, requiring a third-party app; it auto-logged out on every open; news had to be read outside the app." },
     analysis: { id: "Wawancara mahasiswa dan dosen soal plus-minus penggunaan Gapura UB, wireframe, high-fidelity, prototype, dan riset aplikasi pembanding.", en: "Interviews with students and lecturers on the app's pros and cons, wireframing, high-fidelity design, prototyping, and competitor research." },
@@ -154,27 +154,27 @@ const projects = [
       { label: { id: "Lihat Desain Figma", en: "View Figma Design" }, url: "https://www.figma.com/design/FLUnnCej7vWHJBRyQGAdGS/GAPURA-UB-REDESIGN?node-id=0-1&t=deDwrQOsASMpq9P5-1" }
     ]  
   },
-  {
-    id: "web-perpustakaan",
-    title: "Web Perpustakaan",
-    thumbnail: "",
-    shortDesc: { id: "Sistem peminjaman buku digital", en: "Digital book borrowing system" },
-    stack: ["Laravel", "HTML", "CSS"],
-    accent: "frontend",
-    status: "ongoing",
-    problem: { id: "Tugas kampus untuk membangun sistem peminjaman dan pengembalian buku secara digital, menggantikan pencatatan manual.", en: "A university assignment to build a digital book borrowing and return system, replacing manual recording." },
-    analysis: { id: "Perancangan dashboard, kategori buku, dan halaman detail buku.", en: "Designing the dashboard, book categories, and book detail pages." },
-    solution: { id: "Dashboard, kategori, dan detail buku sudah dibangun. Fitur peminjaman dan pengembalian masih dalam tahap pengembangan lanjutan.", en: "Dashboard, category, and detail pages are built. Borrow and return features are still under further development." },
-    photos: [],
-    links: [
-              //{ label: { id: "Lihat Website", en: "View Website" }, url: "https://fayolac.github.io/umkm-malang-company/" },
-              //{ label: { id: "Lihat Desain Figma", en: "View Figma Design" }, url: "#soon" }
-    ]   
-  },
+  // {
+  //   id: "web-perpustakaan",
+  //   title: "Web Perpustakaan",
+  //   thumbnail: "",
+  //   shortDesc: { id: "Sistem peminjaman buku digital", en: "Digital book borrowing system" },
+  //   stack: ["Laravel", "HTML", "CSS"],
+  //   accent: "frontend",
+  //   status: "ongoing",
+  //   problem: { id: "Tugas kampus untuk membangun sistem peminjaman dan pengembalian buku secara digital, menggantikan pencatatan manual.", en: "A university assignment to build a digital book borrowing and return system, replacing manual recording." },
+  //   analysis: { id: "Perancangan dashboard, kategori buku, dan halaman detail buku.", en: "Designing the dashboard, book categories, and book detail pages." },
+  //   solution: { id: "Dashboard, kategori, dan detail buku sudah dibangun. Fitur peminjaman dan pengembalian masih dalam tahap pengembangan lanjutan.", en: "Dashboard, category, and detail pages are built. Borrow and return features are still under further development." },
+  //   photos: [],
+  //   links: [
+  //             //{ label: { id: "Lihat Website", en: "View Website" }, url: "https://fayolac.github.io/umkm-malang-company/" },
+  //             //{ label: { id: "Lihat Desain Figma", en: "View Figma Design" }, url: "#soon" }
+  //   ]   
+  // },
   {
     id: "iot-web",
     title: "IoT + Web Lampu Jalan Otomatis",
-    thumbnail: "",
+    thumbnail: "assets/iot.jpeg",
     shortDesc: { id: "Sistem lampu jalan otomatis berbasis sensor", en: "Sensor-based automatic street light system" },
     stack: ["IoT", "Web Development"],
     accent: "frontend",
@@ -185,7 +185,7 @@ const projects = [
     photos: [],
     links: [
               //{ label: { id: "Lihat Website", en: "View Website" }, url: "https://fayolac.github.io/umkm-malang-company/" },
-              //{ label: { id: "Lihat Desain Figma", en: "View Figma Design" }, url: "#soon" }
+              { label: { id: "Lihat Desain Figma", en: "View Figma Design" }, url: "#soon" }
     ]   
   }
 ];

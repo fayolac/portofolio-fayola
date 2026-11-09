@@ -2,6 +2,7 @@
   --font-body: 'Inter', sans-serif;
   --accent-analyst: #10B981;
   --accent-frontend: #6366F1;
+  --accent-uiux: orange;
 }
 
 [data-theme="dark"] {
@@ -522,6 +523,10 @@ body {
 
 .card-back-cta {
   margin-top: auto;
+}
+
+.accent-uiux {
+  border: 1.5px solid var(--accent-uiux);
 }
 
 .accent-analyst {
